@@ -1,4 +1,4 @@
-import apiClient from './config';
+import apiClient from './axios';
 const RESOURCE_URL = '/products';
 export default {
     /**
@@ -25,8 +25,8 @@ export default {
     /**
      * Actualiza un producto existente
      */
-    async update(product) {
-        const response = await apiClient.put(`${RESOURCE_URL}/${product.id}`, product);
+    async update(id, product) {
+        const response = await apiClient.put(`${RESOURCE_URL}/${id}`, product);
         return response.data;
     },
     /**

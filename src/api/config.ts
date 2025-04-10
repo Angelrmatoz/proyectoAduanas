@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// URL base para la API
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5048/api';
 
 // Crear instancia de axios
 const apiClient = axios.create({
@@ -37,3 +38,5 @@ apiClient.interceptors.response.use(
 );
 
 export default apiClient;
+
+export { API_URL };

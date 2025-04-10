@@ -23,11 +23,13 @@ export const useProductStore = defineStore('products', () => {
     error.value = null;
 
     try {
+      console.log('Fetching products from API...');
       products.value = await ProductService.getAll();
-    } catch (err: Error | unknown) {
+      console.log('Products fetched successfully:', products.value);
+    } catch (err: unknown) {
       const errorMessage = err instanceof Error ? err.message : 'Error al cargar los productos';
       error.value = errorMessage;
-      console.error(error.value);
+      console.error('Error fetching products:', error.value, err);
     } finally {
       isLoading.value = false;
     }
@@ -38,12 +40,14 @@ export const useProductStore = defineStore('products', () => {
     error.value = null;
 
     try {
+      console.log(`Fetching product with ID ${id}...`);
       selectedProduct.value = await ProductService.getById(id.toString());
-    } catch (err: Error | unknown) {
+      console.log('Product fetched successfully:', selectedProduct.value);
+    } catch (err: unknown) {
       const errorMessage =
         err instanceof Error ? err.message : `Error al cargar el producto con ID ${id}`;
       error.value = errorMessage;
-      console.error(error.value);
+      console.error(`Error fetching product with ID ${id}:`, error.value, err);
     } finally {
       isLoading.value = false;
     }
@@ -54,13 +58,15 @@ export const useProductStore = defineStore('products', () => {
     error.value = null;
 
     try {
+      console.log('Creating new product:', product);
       const newProduct = await ProductService.create(product);
       products.value.push(newProduct);
+      console.log('Product created successfully:', newProduct);
       return newProduct;
-    } catch (err: Error | unknown) {
+    } catch (err: unknown) {
       const errorMessage = err instanceof Error ? err.message : 'Error al crear el producto';
       error.value = errorMessage;
-      console.error(error.value);
+      console.error('Error creating product:', error.value, err);
       throw err;
     } finally {
       isLoading.value = false;
@@ -72,19 +78,21 @@ export const useProductStore = defineStore('products', () => {
     error.value = null;
 
     try {
+      console.log(`Updating product with ID ${product.id}:`, product);
       const updatedProduct = await ProductService.update(product.id.toString(), product);
       const index = products.value.findIndex(p => p.id === product.id);
 
       if (index !== -1) {
         products.value[index] = updatedProduct;
+        console.log('Product updated successfully:', updatedProduct);
       }
 
       return updatedProduct;
-    } catch (err: Error | unknown) {
+    } catch (err: unknown) {
       const errorMessage =
         err instanceof Error ? err.message : `Error al actualizar el producto con ID ${product.id}`;
       error.value = errorMessage;
-      console.error(error.value);
+      console.error(`Error updating product with ID ${product.id}:`, error.value, err);
       throw err;
     } finally {
       isLoading.value = false;
@@ -96,13 +104,15 @@ export const useProductStore = defineStore('products', () => {
     error.value = null;
 
     try {
+      console.log(`Deleting product with ID ${id}...`);
       await ProductService.delete(id.toString());
       products.value = products.value.filter(product => product.id !== id);
-    } catch (err: Error | unknown) {
+      console.log(`Product with ID ${id} deleted successfully`);
+    } catch (err: unknown) {
       const errorMessage =
         err instanceof Error ? err.message : `Error al eliminar el producto con ID ${id}`;
       error.value = errorMessage;
-      console.error(error.value);
+      console.error(`Error deleting product with ID ${id}:`, error.value, err);
       throw err;
     } finally {
       isLoading.value = false;
