@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "py8WUG8RIC4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\Backend\\ProductManagement.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ángel\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\Ángel\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
