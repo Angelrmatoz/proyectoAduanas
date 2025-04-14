@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 
 // Configuración de la base de datos SQLite para desarrollo
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection1")));
 
 // Configurar CORS para permitir solicitudes del frontend
 builder.Services.AddCors(options =>
@@ -38,7 +38,7 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var dbContext = services.GetRequiredService<ApplicationDbContext>();
-    dbContext.Database.EnsureCreated();
+  //  dbContext.Database.EnsureCreated();
 }
 
 // Configurar el pipeline de solicitud HTTP

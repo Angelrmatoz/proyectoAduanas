@@ -91,7 +91,7 @@ namespace Backend.Controllers.Products
 
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
-
+            /*
             var productDTO = new ProductDTO
             {
                 Id = product.Id,
@@ -103,9 +103,9 @@ namespace Backend.Controllers.Products
                 ImageUrl = product.ImageUrl,
                 CreatedAt = product.CreatedAt,
                 UpdatedAt = product.UpdatedAt
-            };
+            };*/
 
-            return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, productDTO);
+            return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, createProductDTO);
         }
 
         // PUT: api/Products/5

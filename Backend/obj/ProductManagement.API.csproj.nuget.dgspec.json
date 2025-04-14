@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\backend\\ProductManagement.API.csproj": {}
+    "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\Backend\\ProductManagement.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\backend\\ProductManagement.API.csproj": {
+    "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\Backend\\ProductManagement.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\backend\\ProductManagement.API.csproj",
+        "projectUniqueName": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\Backend\\ProductManagement.API.csproj",
         "projectName": "ProductManagement.API",
-        "projectPath": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\backend\\ProductManagement.API.csproj",
+        "projectPath": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\Backend\\ProductManagement.API.csproj",
         "packagesPath": "C:\\Users\\Ángel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\backend\\obj\\",
+        "outputPath": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

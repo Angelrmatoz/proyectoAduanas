@@ -25,9 +25,9 @@ namespace Backend.Models
         [Required]
         public int Stock { get; set; }
 
-        public string Category { get; set; }
+        public string? Category { get; set; }
 
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
