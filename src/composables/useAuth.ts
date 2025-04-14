@@ -13,10 +13,15 @@ export function useAuth() {
 
   // Verificar si ya hay una sesión guardada al cargar la página
   onMounted(() => {
-    const savedAuth = localStorage.getItem('isAuthenticated');
-    if (savedAuth === 'true') {
-      isAuthenticated.value = true;
-    }
+    // Limpiamos cualquier sesión anterior para asegurar que siempre pase por login
+    localStorage.removeItem('isAuthenticated');
+    isAuthenticated.value = false;
+
+    // Si quieres recuperar la sesión guardada, descomenta estas líneas:
+    // const savedAuth = localStorage.getItem('isAuthenticated');
+    // if (savedAuth === 'true') {
+    //   isAuthenticated.value = true;
+    // }
   });
 
   /**
