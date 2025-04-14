@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v1CZVC4Cb2g=",
+  "dgSpecHash": "n9WiEQplSgs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\backend\\ProductManagement.API.csproj",
+  "projectFilePath": "C:\\Users\\Ángel\\Carpeta personal\\Trabajos\\PWeb\\Clase JS\\TareaAduanas\\proyectoAduanas\\Backend\\ProductManagement.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ángel\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Ángel\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
