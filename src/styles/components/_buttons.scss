@@ -64,8 +64,8 @@
     color: white;
   }
 
-  // Grupo de botones para mantener el espaciado consistente
-  .btn-group {
+  // Grupo de botones (ahora anidado dentro de .btn)
+  &-group {
     display: flex;
     gap: $spacing-sm;
   }

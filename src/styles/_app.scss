@@ -50,11 +50,23 @@
       color: $primary-color;
       margin: 0;
       font-weight: 600;
+
+      @include respond-to(sm) {
+        font-size: 2rem;
+      }
+
+      @include respond-to(md) {
+        font-size: 2.2rem;
+      }
     }
 
     .logo {
       height: 4rem;
       width: auto;
+    }
+
+    @include respond-to(md) {
+      padding: $spacing-md 0;
     }
   }
 
@@ -72,67 +84,46 @@
     color: $secondary-color;
     font-size: 1.4rem;
   }
-}
 
-.main-nav {
-  // Por defecto en dispositivos pequeños: columna vertical
-  @include flex(column, center, center);
-  gap: $spacing-sm;
-  width: 100%;
-  margin-top: $spacing-sm;
-
-  // En dispositivos medianos y grandes: fila horizontal
-  @include respond-to(sm) {
-    @include flex(row, flex-end, center);
-    gap: $spacing-md;
-    width: auto;
-    margin-top: 0;
-  }
-
-  .nav-link {
-    padding: $spacing-sm $spacing-md;
-    color: $dark-color;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: $border-radius;
-    transition: all 0.2s ease;
-
-    // En móviles, cada enlace ocupa todo el ancho
+  // Navegación principal (ahora anidada dentro de .app)
+  .main-nav {
+    // Por defecto en dispositivos pequeños: columna vertical
+    @include flex(column, center, center);
+    gap: $spacing-sm;
     width: 100%;
-    text-align: center;
+    margin-top: $spacing-sm;
 
+    // En dispositivos medianos y grandes: fila horizontal
     @include respond-to(sm) {
+      @include flex(row, flex-end, center);
+      gap: $spacing-md;
       width: auto;
+      margin-top: 0;
     }
 
-    &:hover {
-      background-color: rgba($primary-color, 0.1);
-    }
+    .nav-link {
+      padding: $spacing-sm $spacing-md;
+      color: $dark-color;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: $border-radius;
+      transition: all 0.2s ease;
 
-    &.router-link-active {
-      color: $primary-color;
-      background-color: rgba($primary-color, 0.1);
-    }
-  }
-}
+      // En móviles, cada enlace ocupa todo el ancho
+      width: 100%;
+      text-align: center;
 
-@include respond-to(sm) {
-  .app {
-    &-header {
-      .app-title {
-        font-size: 2rem;
+      @include respond-to(sm) {
+        width: auto;
       }
-    }
-  }
-}
 
-@include respond-to(md) {
-  .app {
-    &-header {
-      padding: $spacing-md 0;
+      &:hover {
+        background-color: rgba($primary-color, 0.1);
+      }
 
-      .app-title {
-        font-size: 2.2rem;
+      &.router-link-active {
+        color: $primary-color;
+        background-color: rgba($primary-color, 0.1);
       }
     }
   }

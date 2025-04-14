@@ -40,25 +40,46 @@ body {
   max-width: 120rem; // 1200px
   margin: 0 auto;
   padding: 0 $spacing-md;
+
+  @include respond-to(sm) {
+    padding: 0 $spacing-lg;
+  }
+
+  @include respond-to(md) {
+    padding: 0 $spacing-xl;
+  }
 }
 
-.text-center {
-  text-align: center;
+// Utilidades de texto
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
 }
 
+// Utilidades de diseño
 .card {
   @include card;
 }
 
-// Responsive
-@include respond-to(sm) {
-  .container {
-    padding: 0 $spacing-lg;
-  }
-}
+// Utilidades de flex
+.flex {
+  display: flex;
 
-@include respond-to(md) {
-  .container {
-    padding: 0 $spacing-xl;
+  &-column {
+    flex-direction: column;
+  }
+
+  &-center {
+    justify-content: center;
+    align-items: center;
   }
 }
